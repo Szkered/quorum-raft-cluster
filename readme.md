@@ -8,7 +8,8 @@
 `(sudo) ./raft-setup.sh`
 Password is stored in password.txt
 
-Before doing step (3), you will need to properly configure `genesis.json`.
+Before doing step (3), you will need to prefund all the account used for smart contract
+by properly configuring `genesis.json`.
 First repeat (1) and (2) for all the machine in your cluster, then prefund all the
 default accounts in the genesis block as follows:
 
@@ -27,6 +28,10 @@ have:
   },
 ```
 This genesis file need to be the same across all the node in your cluster.
+
+Alternatively, you can have only one prefunded account in your `genesis.json`,
+say node1's default account, and send out ether balance from that account
+to all other nodes' account.
 
 ## 3. Init chain with setup files
 `(sudo) ./raft-init.sh`
