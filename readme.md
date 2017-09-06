@@ -1,4 +1,4 @@
-# Setup
+# Steps
 
 ## 1. Prepare dependency
 `(sudo) ./get-quorum.sh`
@@ -45,8 +45,8 @@ After inspecting the log and making sure that constellation nodes are properly c
 you can start geth node by
 `(sudo) ./raft-start.sh`
 
-## 5. Add peer using raft dynamic membership feature
-login to geth console by
+## 5. Add peer using raft dynamic membership
+Login to geth console by
 `(sudo) geth attach qdata/geth.ipc`
 then do
 `raft.addPeer($enodeInfo)`
@@ -56,3 +56,8 @@ N.B. YOU HAVE TO USE PUBLIC IP IN THE ENODEINFO.
 Now you can check peer connectivity by typing `admin.peers` in each nodes' geth console.
 You can also do a test transaction with your default account by
 `eth.sendTransaction({from:eth.accounts[0]})`.
+
+## 6. If something goes wrong..
+First stop all instances by `(sudo) ./stop.sh`. 
+Wipe out chain data and reinitialize simply by `(sudo) ./raft-init.sh`
+Then do step (4) and (5)
