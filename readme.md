@@ -38,10 +38,9 @@ Let's say you want to bring up a cluster of three nodes, then in each node, the 
 ```
 [
 "enode://26e80451f629db9249cf1f325e1346863532987ec816103b3ef64d193b213786d80837dfebfd5d42ec05ed755c0e520739808fe9134efb350b7bbf9cb8fc5d06@13.76.162.67:21000?discport=0&raftport=23000",
-  "enode://90c9b06bc504b19b3e187244c8a364eeb84d6a1af26ffbba568a74172abcc24bf5f54f5ddfd766cba970637b096dca1313d693a221c4e32782cf0a5766d36304@52.187.50.244:21000?discport=0&raftport=23000", 
-  "enode://6b4f32ec54afba2c6190b460a68c4157f3778778ebec15d1c0c5a4c36ba3f87bb2eed3ebc9efc7eb8e776f037056c71bc28d71dae829b8b4501411c88cec52e9@52.187.127.171:21000?discport=0&raftport=23000"
+"enode://90c9b06bc504b19b3e187244c8a364eeb84d6a1af26ffbba568a74172abcc24bf5f54f5ddfd766cba970637b096dca1313d693a221c4e32782cf0a5766d36304@52.187.50.244:21000?discport=0&raftport=23000",
+"enode://6b4f32ec54afba2c6190b460a68c4157f3778778ebec15d1c0c5a4c36ba3f87bb2eed3ebc9efc7eb8e776f037056c71bc28d71dae829b8b4501411c88cec52e9@52.187.127.171:21000?discport=0&raftport=23000"
 ]
-
 ```
 Note that the order of the enodes in the `static-nodes.json` file need to be the same across all peers. So it is best to just copy the same file over all the nodes.
 
