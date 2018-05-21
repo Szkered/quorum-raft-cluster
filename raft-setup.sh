@@ -1,6 +1,7 @@
 #!/bin/bash
 set -u
 set -e
+CONSTELLATION_KEY_PASSWORD=""
 
 echo "[*] Cleaning up temporary data directories"
 rm -rf raft
@@ -19,6 +20,6 @@ killall geth
 
 echo "[*] Generating constellation key pair"
 cd raft
-constellation-node --generatekeys=constellation
+echo $CONSTELLATION_KEY_PASSWORD | constellation-node --generatekeys=constellation
 
 echo "[*] Done"
